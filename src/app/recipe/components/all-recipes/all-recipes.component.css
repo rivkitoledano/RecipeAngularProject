@@ -1,0 +1,15 @@
+.card-container {
+    display: flex; /* Make the container a flexbox */
+    justify-content: space-around; /* Distribute cards evenly with space between */
+    margin: 10px; 
+    flex-wrap: wrap;
+
+  }
+  
+#son {
+    margin: 5px; 
+    box-shadow: 80px 7px 7px black;
+    width: 30%;
+    height: 200px;
+  }
+  

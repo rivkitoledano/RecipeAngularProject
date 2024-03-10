@@ -1,0 +1,53 @@
+<app-nav-bar></app-nav-bar>
+<div class="container" *ngIf="images && recipe">
+	<div *ngIf="images.length > 0">
+		<ngb-carousel>
+			<ng-template ngbSlide *ngFor="let image of images">
+				<div class="picsum-img-wrapper">
+					<img [src]="image" alt="image">
+				</div>
+				<div class="carousel-caption">
+					<h1>{{recipe.name}}</h1>
+					<h2>{{category?.name}} {{category?.routingIcon}}</h2>
+					<h3>difficulty level {{""|difficultyLevel:recipe.difficultyLevel}}</h3>
+				</div>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+
+	<div class="row">
+		<div class="col">
+		  <h2>Ingredients</h2>
+		  <ul class="list-group">
+			<li class="list-group-item" *ngFor="let ingredient of ingredients">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+					<path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+					<path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+				  </svg>  {{ ingredient }}</li>
+		  </ul>
+		</div>
+		<div class="col">
+		  <h2>Instructions</h2>
+		  <ol class="list-group l">
+			<li class="list-group-item" *ngFor="let instruction of instructions">
+				 {{ instruction }}
+			</li>
+		  </ol>
+		</div>
+	  </div>
+	  <div class="example-button-container" *ngIf="optiondelete">
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="deleteRecipe()">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+	  <hr />
+	  	  <div class="rating">
+		<ngb-rating  [(rate)]="rating" />
+	
+	  </div>
+	  <hr />
+
+	  <pre>Rate: <b>{{ rating }}</b></pre>
+	
+	</div>
+<app-footer></app-footer>

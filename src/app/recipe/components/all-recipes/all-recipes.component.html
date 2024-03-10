@@ -1,0 +1,7 @@
+<app-nav-bar></app-nav-bar>
+<div class="card-container">
+    <div *ngFor="let recipe of RecipeList" >
+        <app-small-recipe id="son" [recipe]="recipe"></app-small-recipe>
+    </div>
+</div>
+<app-footer></app-footer>

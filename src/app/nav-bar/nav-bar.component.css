@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-toolbar-row, .mat-toolbar-single-row{
+    background-color: #000000;
+  }
+  mat-toolbar{
+margin-bottom: 2%;
+  }

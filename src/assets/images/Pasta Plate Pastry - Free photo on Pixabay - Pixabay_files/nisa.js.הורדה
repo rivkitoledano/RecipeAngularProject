@@ -1,0 +1,35 @@
+(function(){
+  
+//old browser
+if(!window.addEventListener || ![].forEach) return; 
+    
+var iframesrc = "https://netfree.link/" + (Math.random()+'').substr(2) + "/nisa/main";
+
+
+if( (/google\./).test( window.location.hostname) ){
+
+    var elm = document.createElement('iframe');
+
+    var searchform = document.getElementById('searchform');
+    var viewport = document.getElementById('viewport');
+    
+    elm.style.cssText = "border: none; height: 72px; max-width: 900px; width: 80%;";
+    
+    if(searchform && viewport){
+        elm.src = iframesrc;
+        elm.style.cssText += "   position: absolute; right: 0; left: 0; margin: 35px auto; top: 0;";
+        viewport.appendChild(elm);
+    }
+    
+    var appbar = document.getElementById('appbar');
+    var extabar = document.getElementById('extabar');
+
+    if(appbar && extabar){
+        elm.src = iframesrc;
+        elm.style.cssText += " margin: auto; display: block;";
+        appbar.nextSibling.parentNode.insertBefore(elm,appbar.nextSibling);
+    }
+
+}
+
+})();

@@ -1,0 +1,54 @@
+/* Style for carousel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.267);
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    margin-top: 10%;
+  }
+  
+  .picsum-img-wrapper {
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+    /* overflow: hidden; */
+  }
+  
+  .picsum-img-wrapper img {
+    width: 130%;
+    object-fit: cover;
+  }
+  
+  /* Style for ingredient and instruction lists */
+  .ingredients-list, .instructions-list {
+    list-style-type: none;
+  }
+  
+ 
+  /* סגנון לרשימת מרכיבים והוראות */
+.ingredients-list, .instructions-list {
+    padding-left: 20px;
+  }
+  
+  /* סגנון לכיתות הפריטים ברשימות */
+  .list-group-item {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.299);
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  /* סגנון לרשימת מרכיבים */
+  .ingredients-list {
+    margin-bottom: 20px;
+  }
+  
+  /* סגנון לרשימת הוראות */
+  .instructions-list {
+    margin-bottom: 40px;
+  }
+  .rating{
+    margin-left: 42%;
+  }
+pre{
+    margin-left: 45%;
+
+}
+  

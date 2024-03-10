@@ -1,0 +1,27 @@
+  <div class="cardbox">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{recipe?.name}}</mat-card-title>
+        <mat-card-subtitle>{{recipe?.preparationTime}} minutes</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src={{recipe?.routingImage}} alt="Photo of a Shiba Inu">
+      
+      <mat-card-content>difficulty level {{""|difficultyLevel:recipe?.difficultyLevel}}</mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Like
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+            <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15m0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+          </svg>
+        </button>
+        <button mat-button (click)="showDetails()" >READ MORE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+        </svg>
+        </button>
+      </mat-card-actions>
+     
+
+    </mat-card>
+  
+  </div>
+

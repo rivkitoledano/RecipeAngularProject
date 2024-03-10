@@ -1,0 +1,57 @@
+/* סגנון כללי */
+.logout-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .logout-message {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .logout-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  .logout-button svg {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+  
+.bacgroundImage {
+
+	width: 10%;
+	width: 100vw;
+	/* השתמשתי ב- vw במקום ב- % כדי לקבוע את הרוחב ביחס לרוחב של החלון ולא לעמודה */
+	height: 100vh;
+	/* השתמשתי ב- vh במקום ב- % כדי לקבוע את הגובה ביחס לגובה של החלון ולא לעמודה */
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	/* קביעת מיקום קבוע לתמונה */
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	/* שקיפות של 50% - אפשר לשנות את הערך לפי המבוקש */
+	z-index: -1;
+	/* שכבה אחורית מאחורי התוכן */
+}
+.foot{
+top: 10000px;    
+}
+.red{
+    background-color: #ff565675;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+}

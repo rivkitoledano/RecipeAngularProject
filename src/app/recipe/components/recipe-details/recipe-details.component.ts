@@ -1,0 +1,116 @@
+import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Recipe } from '../../../../entities/recipe.model';
+import { RecipeService } from '../../../recipe.service';
+import { ActivatedRoute } from '@angular/router'; // ייבוא משתנה ActivatedRoute
+import { CategoryService } from '../../../category.service';
+import { Category } from '../../../../entities/Category.model';
+import { User } from '../../../../entities/user.model';
+import { UserService } from '../../../user.service';
+import {MatIconModule} from '@angular/material/icon';
+
+@Component({
+  selector: 'app-recipe-details',
+  templateUrl: './recipe-details.component.html',
+  styleUrl: './recipe-details.component.css'
+})
+export class RecipeDetailsComponent implements OnInit {
+  recipeId?: number | any;// מזהה המתכון
+  categoryId?: number | any;// מזהה הקטגוריה
+  userId?: number | any;// מזהה המתכון
+
+  images?: string[]
+  recipe?: Recipe
+  category?: Category
+  user?: User
+  ingredients?: string[]
+  instructions?: string[]
+  rating = 8;
+  optiondelete:boolean=false
+
+  constructor(
+    config: NgbCarouselConfig,
+    private _recipeService: RecipeService,
+    private route: ActivatedRoute,
+    private _categoryService: CategoryService,
+    private _userService:UserService
+  ) {
+    // customize default values of carousels used by this component tree
+    config.interval = 10000;
+    config.wrap = true;
+    config.keyboard = true;
+    config.pauseOnHover = false;
+  }
+
+  ngOnInit(): void {
+    // מקבל את המזהה של המתכון מה-Route
+    this.recipeId = this.route.snapshot.paramMap.get('id'); // שימוש ב- snapshot על ה- ActivatedRoute
+    this.initRecipe();
+
+  }
+  initRecipe() {
+    this._recipeService.getRecipeById(this.recipeId).subscribe({
+      next: (res) => {
+        this.recipe = res;
+        console.log(this.recipe);
+        this.ingredients = this.recipe?.ingredients;
+        this.instructions = this.recipe?.instructions;
+        this.images = [this.recipe?.routingImage!, this.recipe?.routingImage!];
+        this.categoryId = this.recipe.categoryId;
+        this.userId = this.recipe.userId;
+        this.initCategory();
+        this.initUser();
+      },
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        console.log('finish recipe');
+      }
+    });
+  }
+  initCategory() {
+    this._categoryService.getCategoryById(this.categoryId).subscribe({
+      next: (res) => {
+        this.category = res;
+        console.log(this.category)
+      },
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        console.log('finish category');
+      }
+    });
+  }
+  initUser() {
+    this._userService.getUserById(this.userId).subscribe({
+      next: (res) => {
+        this.user = res;
+        console.log(this.user)
+        if(this.user.password==sessionStorage.getItem('password')&&this.user.name==sessionStorage.getItem('username'))
+        this.optiondelete=true
+      },
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        console.log('finish user');
+      }
+    });
+  }
+  deleteRecipe(){
+    this._recipeService.deleteRecipe(this.recipeId).subscribe({
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        console.log('finish recipe delete');
+      }
+    });
+  }
+}
+
+
+
+
