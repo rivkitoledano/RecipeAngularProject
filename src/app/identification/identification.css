@@ -13,7 +13,6 @@ body {
 }
 
 .example-container mat-form-field+mat-form-field {
-	margin-left: 8px;
 }
 
 .example-right-align {
@@ -116,7 +115,6 @@ a {
 	font-size: 22px;
 	margin-right: 15px;
 	padding-bottom: 5px;
-	margin: 0 15px 10px 0;
 	display: inline-block;
 	border-bottom: 2px solid transparent;
 }
@@ -138,7 +136,6 @@ a {
 }
 
 .login-form .group {
-	margin-bottom: 15px;
 }
 
 .login-form .group .label,
@@ -238,7 +235,6 @@ a {
 
 .hr {
 	height: 2px;
-	margin: 60px 0 50px 0;
 	background: rgba(255, 255, 255, .2);
 }
 
@@ -249,9 +245,9 @@ a {
 .bacgroundImage {
 
 	width: 10%;
-	width: 100vw;
+	width: 100%;
 	/* השתמשתי ב- vw במקום ב- % כדי לקבוע את הרוחב ביחס לרוחב של החלון ולא לעמודה */
-	height: 100vh;
+	height: 58vw;
 	/* השתמשתי ב- vh במקום ב- % כדי לקבוע את הגובה ביחס לגובה של החלון ולא לעמודה */
 	background-size: cover;
 	background-position: center;

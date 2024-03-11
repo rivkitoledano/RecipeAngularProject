@@ -14,7 +14,7 @@ export class SmallRecipeComponent {
 
   constructor(private router:Router,private recipeRouter:recipeRoutingModule) { }
   showDetails(): void {
-    var username = sessionStorage.getItem('username');
+    var username = sessionStorage.getItem('name');
 
     // אם הערך קיים ב-Session Storage
     if (username !== null) {

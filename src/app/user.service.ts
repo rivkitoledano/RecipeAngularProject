@@ -16,10 +16,11 @@ export class UserService {
   getUserById(id:number): Observable<User> {
     return this.http.get<User>(`https://localhost:7265/api/User/${id}`)}
 
-  setNewUser(user: any): Observable<any> {
-    return this.http.post<any>('https://localhost:7265/api/User', user);}
-
+  setNewUser(user: User): Observable<User> {
+    return this.http.post<User>(`https://localhost:7265/api/User`, user);}
+ 
     
-  updateUser(user:User,id:number): Observable<User> {
-    return this.http.put(`https://localhost:7265/api/User/${id}`,user)}
+    
+  // updateUser(user:User,id:number): Observable<User> {
+  //   return this.http.put(`https://localhost:7265/api/User/${id}`,user)}
 }

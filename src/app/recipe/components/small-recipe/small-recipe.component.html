@@ -3,7 +3,8 @@
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{recipe?.name}}</mat-card-title>
-        <mat-card-subtitle>{{recipe?.preparationTime}} minutes</mat-card-subtitle>
+        
+        <mat-card-subtitle>preparation time {{ recipe.preparationTime| displayTime }}</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image src={{recipe?.routingImage}} alt="Photo of a Shiba Inu">
       

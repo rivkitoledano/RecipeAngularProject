@@ -17,12 +17,15 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import  {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DisplayTimePipe } from '../display-time.pipe';
 
 @NgModule({
-    declarations: [AllRecipesComponent, SmallRecipeComponent, EditRecipeComponent, AddRecipeComponent, RecipeDetailsComponent],
+    declarations: [AllRecipesComponent, SmallRecipeComponent, EditRecipeComponent, AddRecipeComponent, RecipeDetailsComponent,DisplayTimePipe],
     imports: [
         CommonModule, MatButtonModule, MatCardModule, recipeRoutingModule, NavBarComponent,NgbPaginationModule, NgbAlertModule,
-        DifficultyLevelPipe, NgbCarouselModule,FooterComponent,NgbRatingModule,MatIconModule,FormsModule,ReactiveFormsModule
+        DifficultyLevelPipe, NgbCarouselModule,FooterComponent,NgbRatingModule,MatIconModule,
+        FormsModule,ReactiveFormsModule,MatCheckboxModule,
     ]
 })
 export class RecipeModule { }

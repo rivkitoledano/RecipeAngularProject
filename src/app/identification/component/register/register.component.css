@@ -1,0 +1,16 @@
+.required{
+    color: red;
+    font-size: 10px;
+}
+.register{
+    width: 400px;
+    margin-left: 38%;
+}.button{
+width: 100%;
+}
+h1{
+    margin-left: 39%;
+    margin-top:5%;
+    /* text-decoration:underline; */
+
+}

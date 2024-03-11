@@ -51,13 +51,11 @@ export class LoginComponent implements OnInit {
       const navigationExtras: NavigationExtras = {
         queryParams: { username: this.username }
     };
-
-      this.router.navigate(["identification/register"],navigationExtras)
-
+    this.router.navigate(["identification/register"],navigationExtras);
     }
   }
   saveUserDetails() {
-    sessionStorage.setItem('username', this.username);
+    sessionStorage.setItem('name', this.username);
     sessionStorage.setItem('password', this.password);
   }
 }

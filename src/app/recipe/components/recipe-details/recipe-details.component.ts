@@ -7,7 +7,7 @@ import { CategoryService } from '../../../category.service';
 import { Category } from '../../../../entities/Category.model';
 import { User } from '../../../../entities/user.model';
 import { UserService } from '../../../user.service';
-import {MatIconModule} from '@angular/material/icon';
+import { DisplayTimePipe } from '../../../display-time.pipe';
 
 @Component({
   selector: 'app-recipe-details',

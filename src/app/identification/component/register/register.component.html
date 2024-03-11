@@ -2,13 +2,16 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+<app-nav-bar></app-nav-bar>
+<div><img class="bacgroundImage" src="https://cdn.pixabay.com/photo/2017/10/22/21/41/turmeric-2879382_640.jpg"></div>
 
-<div class="login-form" [formGroup]="userForm">
+<h1>register</h1><hr/>
+<div class="login-form register" [formGroup]="userForm"  >
   <div class="sign-in-htm" >
     <div class="group"  >
       <mat-form-field appearance="fill" class="form-field">
         <mat-label>user name</mat-label>
-        <input matInput type="text" id="username" formControlName="username">
+        <input matInput type="text" id="username" formControlName="name">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
       </mat-form-field>
     </div>
@@ -16,6 +19,12 @@
       <mat-form-field class="form-field">
         <mat-label>password</mat-label>
         <input type="password" id="password" formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <div class="required" *ngIf="userForm.controls['password'].hasError('required')">
+          הסיסמה היא שדה חובה*
+        </div>
+        <div class="required" *ngIf="userForm.controls['password'].hasError('invalidPassword')">
+          הסיסמה חייבת לכלול לפחות 8 תווים עם לפחות אות גדולה, אות קטנה ומספר*
+        </div>
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
           [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -50,3 +59,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

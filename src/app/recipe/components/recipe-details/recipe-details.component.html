@@ -8,8 +8,9 @@
 				</div>
 				<div class="carousel-caption">
 					<h1>{{recipe.name}}</h1>
-					<h2>{{category?.name}} {{category?.routingIcon}}</h2>
+					<h2>{{category?.name}}<i class="{{category?.routingIcon}}"></i><i class="ionicons ion-ios-trash"></i> </h2>
 					<h3>difficulty level {{""|difficultyLevel:recipe.difficultyLevel}}</h3>
+					<h4>preparation time {{ recipe.preparationTime| displayTime }}</h4>
 				</div>
 			</ng-template>
 		</ngb-carousel>
