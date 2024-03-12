@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Recipe } from '../../../../entities/recipe.model';
 import { RecipeService } from '../../../recipe.service';
-import { ActivatedRoute } from '@angular/router'; // ייבוא משתנה ActivatedRoute
+import { ActivatedRoute, Router } from '@angular/router'; // ייבוא משתנה ActivatedRoute
 import { CategoryService } from '../../../category.service';
 import { Category } from '../../../../entities/Category.model';
 import { User } from '../../../../entities/user.model';
@@ -33,7 +33,8 @@ export class RecipeDetailsComponent implements OnInit {
     private _recipeService: RecipeService,
     private route: ActivatedRoute,
     private _categoryService: CategoryService,
-    private _userService:UserService
+    private _userService:UserService,
+    private router:Router
   ) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
@@ -108,6 +109,10 @@ export class RecipeDetailsComponent implements OnInit {
         console.log('finish recipe delete');
       }
     });
+  }
+  edit(){
+    this.router.navigate(['/recipe/editRecipe', this.recipe?.id]);
+
   }
 }
 

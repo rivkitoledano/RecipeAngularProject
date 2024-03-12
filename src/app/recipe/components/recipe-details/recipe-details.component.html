@@ -30,8 +30,8 @@
 		<div class="col">
 		  <h2>Instructions</h2>
 		  <ol class="list-group l">
-			<li class="list-group-item" *ngFor="let instruction of instructions">
-				 {{ instruction }}
+			<li class="list-group-item" *ngFor="let instruction of instructions; let i = index">
+				{{i+1}}. {{ instruction }}
 			</li>
 		  </ol>
 		</div>
@@ -40,6 +40,9 @@
         <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="deleteRecipe()">
           <mat-icon>delete</mat-icon>
         </button>
+		<button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="deleteRecipe()">
+			<mat-icon>delete</mat-icon>
+		</button>
       </div>
 	  <hr />
 	  	  <div class="rating">

@@ -71,6 +71,7 @@ export class RegisterComponent implements OnInit {
               this.router.navigate(['/recipe']);
               sessionStorage.setItem('name', newUser.name);
               sessionStorage.setItem('password', newUser.password); // Storing password in sessionStorage is generally not recommended for security reasons
+              sessionStorage.setItem('id', newUser.id); 
             },
             error: (err) => {
               console.error('Registration failed:', err);

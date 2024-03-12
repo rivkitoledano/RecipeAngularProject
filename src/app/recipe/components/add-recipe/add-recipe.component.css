@@ -30,7 +30,7 @@ p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
-   
+
 }
 
 .btn-add-recipe {
@@ -56,6 +56,53 @@ p {
     margin-top: 50px;
     color: #888;
 }
-.text{
-   
+
+.bacgroundImage {
+
+    width: 100%;
+    /* השתמשתי ב- vw במקום ב- % כדי לקבוע את הרוחב ביחס לרוחב של החלון ולא לעמודה */
+    height: 80wv;
+    /* השתמשתי ב- vh במקום ב- % כדי לקבוע את הגובה ביחס לגובה של החלון ולא לעמודה */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    /* קביעת מיקום קבוע לתמונה */
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    /* שקיפות של 50% - אפשר לשנות את הערך לפי המבוקש */
+    z-index: -1;
+    /* שכבה אחורית מאחורי התוכן */
+}
+
+app-footer {
+    padding-bottom: 0%;
+}
+
+#container {
+    width: 40%;
+    margin-left: 30%;
+    background-color: rgba(255, 255, 255, 0.205);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 2% 2% 2% 2%;
+}
+#inputCategory{
+    width: 152%;
+}
+#raiting{
+font-size: 25px;
+margin-top: 2%;
+}
+#modal-basic-title{
+margin: auto;    font-weight: 800;
+    font-size: large;
+    margin-bottom: 2%;
+}
+.btn-outline-dark{
+    margin-top: 4%;
+    width: 100%;
+}
+.form-control{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ 
 }

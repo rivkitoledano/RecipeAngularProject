@@ -47,7 +47,7 @@ export class AddRecipeComponent implements OnInit {
 			category: ['', Validators.required],
 			preparation_time: ['', Validators.required],
 			difficulty: ['', [Validators.required, Validators.min(1), Validators.max(5)]],
-			userId: ['', Validators.required],
+			userId: [sessionStorage.getItem('id')],
 			routingImage: [''],
 			ingredients: this.fb.array([this.fb.control('')]),
 			instructions: this.fb.array([this.fb.control('')]),

@@ -11,6 +11,8 @@ export class LogoutComponent {
   logout() {
     sessionStorage.removeItem('username');
     sessionStorage.removeItem('password');
+    sessionStorage.removeItem('id');
+
     this.logoutbe=true
   }
 }

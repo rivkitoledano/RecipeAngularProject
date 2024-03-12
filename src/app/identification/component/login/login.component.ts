@@ -57,5 +57,7 @@ export class LoginComponent implements OnInit {
   saveUserDetails() {
     sessionStorage.setItem('name', this.username);
     sessionStorage.setItem('password', this.password);
+    sessionStorage.setItem('id', (this.currentUser.id).toString()); 
+
   }
 }

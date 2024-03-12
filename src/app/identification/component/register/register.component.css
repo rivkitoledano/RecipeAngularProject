@@ -14,3 +14,8 @@ h1{
     /* text-decoration:underline; */
 
 }
+.bacgroundImage {
+
+	width: 100%;
+	/* השתמשתי ב- vw במקום ב- % כדי לקבוע את הרוחב ביחס לרוחב של החלון ולא לעמודה */
+	height: 58vw;}

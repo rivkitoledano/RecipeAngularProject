@@ -12,7 +12,7 @@ const routes: Route[] = [
   { path: 'allRecipe', component:AllRecipesComponent },
   { path: 'addRecipe', component:AddRecipeComponent },
   { path: ':id', component:RecipeDetailsComponent },
-  { path: 'editRecipe', component:EditRecipeComponent },
+  { path: 'editRecipe/:id', component:EditRecipeComponent },
 ]
 
 @NgModule({
