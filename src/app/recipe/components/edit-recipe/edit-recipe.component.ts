@@ -6,7 +6,8 @@ import { Recipe } from '../../../../entities/recipe.model';
 import { RecipeService } from '../../../recipe.service';
 import { CategoryService } from '../../../category.service';
 import { Category } from '../../../../entities/Category.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -18,14 +19,14 @@ export class EditRecipeComponent implements OnInit {
   recipeToUpdate: Recipe|undefined;
   rating = 0;
   recipeForm?: FormGroup;
-  dateAdded: Date | undefined;
   recipeId:number;
   list: number[] = [6, 4, 7, 4, 6];
   categoryList?:Category[]
   constructor(private fb: FormBuilder, 
     private _recipeService: RecipeService,
     private _categoryService: CategoryService,
-    private route:ActivatedRoute) {
+    private route:ActivatedRoute,
+    private router:Router) {
     // קריאה לפונקציה initForm כדי לאתחל את הטופס
     this.initForm();
   }
@@ -140,30 +141,39 @@ export class EditRecipeComponent implements OnInit {
   saveRecipe() {
     this.removeEmptyFields();
     const formData = this.recipeForm?.value;
-    const rating = this.rating;
-    formData.difficulty = rating;
+    const difficultyLevel = this.rating;
+    formData.difficulty = difficultyLevel;
     console.log('Form Data:', formData); // הדפסת הנתונים לבדיקה
     const newRecipe: Recipe = {
+      ...this.recipeToUpdate,
       name: formData.name,
       categoryId: formData.category,
       preparationTime: formData.preparation_time,
-      difficultyLevel: rating,
-      dateAdded: this.dateAdded,
+      difficultyLevel: difficultyLevel,
       ingredients: formData.ingredients,
       instructions: formData.instructions,
       userId: formData.userId,
       routingImage: formData.routingImage
-
     };
-    console.log(formData.name, "name")
-    this._recipeService.setNewRecipe(newRecipe).subscribe(
-      (response: any) => {
-        console.log('Recipe saved successfully!', response);
+    console.log( "recipeToUpdate",this.recipeToUpdate)
+
+    console.log( "name",newRecipe)
+    this._recipeService.updateRecipe(newRecipe,this.recipeToUpdate.id).subscribe({
+      next: (res) => {
+        Swal.fire(
+					'המתכון התעדכן בהצלחה ',
+					'♥️ תודה שעזרת לנו להשתפר',
+					'success'
+				  );
+				 this.router.navigate(['/recipe/allRecipe']);
       },
-      (error: any) => {
-        console.error('Error saving recipe:', error);
+      error: (err) => {
+        console.log(err)
       },
-    )
+      complete: () => {
+        console.log('finish');
+      }
+    })
   }
   removeEmptyFields() {
     this.removeEmptyFieldsFromArray(this.ingredientsArray);

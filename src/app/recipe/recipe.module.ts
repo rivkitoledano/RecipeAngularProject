@@ -19,13 +19,14 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { DisplayTimePipe } from '../display-time.pipe';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
     declarations: [AllRecipesComponent, SmallRecipeComponent, EditRecipeComponent, AddRecipeComponent, RecipeDetailsComponent,DisplayTimePipe],
     imports: [
         CommonModule, MatButtonModule, MatCardModule, recipeRoutingModule, NavBarComponent,NgbPaginationModule, NgbAlertModule,
         DifficultyLevelPipe, NgbCarouselModule,FooterComponent,NgbRatingModule,MatIconModule,
-        FormsModule,ReactiveFormsModule,MatCheckboxModule,
+        FormsModule,ReactiveFormsModule,MatCheckboxModule,MenuModule
     ]
 })
 export class RecipeModule { }

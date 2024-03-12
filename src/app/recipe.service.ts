@@ -19,6 +19,8 @@ export class RecipeService {
     return this.http.post<Recipe>('https://localhost:7265/api/Recipe', recipe);}
   updateRecipe(recipe:Recipe,id:number): Observable<Recipe> {
     return this.http.put(`https://localhost:7265/api/Recipe/${id}`,recipe)}
-  deleteRecipe(id:number): Observable<void> {
-    return this.http.delete<void>(`https://localhost:7265/api/User/${id}`);}
+    deleteRecipe(id: number): Observable<Recipe> {
+      return this.http.delete<Recipe>(`https://localhost:7265/api/Recipe/${id}`);
+    }
+    
 }

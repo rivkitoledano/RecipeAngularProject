@@ -9,7 +9,7 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 export class LogoutComponent {
   logoutbe?:boolean=false
   logout() {
-    sessionStorage.removeItem('username');
+    sessionStorage.removeItem('name');
     sessionStorage.removeItem('password');
     sessionStorage.removeItem('id');
 

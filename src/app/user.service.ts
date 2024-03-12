@@ -19,8 +19,4 @@ export class UserService {
   setNewUser(user: User): Observable<User> {
     return this.http.post<User>(`https://localhost:7265/api/User`, user);}
  
-    
-    
-  // updateUser(user:User,id:number): Observable<User> {
-  //   return this.http.put(`https://localhost:7265/api/User/${id}`,user)}
 }

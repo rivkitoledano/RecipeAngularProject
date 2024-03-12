@@ -1,16 +1,17 @@
 /* Style for carousel */
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.451);
     color: white;
     font-size: 40px;
     padding: 10px;
     margin-top: 10%;
+    
   }
-  
+  .picsum-img-wrapper{
+  }
   .picsum-img-wrapper {
     width: 100%;
     height: 700px; /* Adjust height as needed */
-    /* overflow: hidden; */
   }
   
   .picsum-img-wrapper img {
@@ -51,4 +52,10 @@ pre{
     margin-left: 45%;
 
 }
-  
+  .btn-group{
+    margin-top: 3%;
+    width: 40%;
+    margin-left: 30%;
+    border: 1px white solid !important;
+    box-shadow: 0px 0.5px 1px rgb(143, 143, 143);
+  }

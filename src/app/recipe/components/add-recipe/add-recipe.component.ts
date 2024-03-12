@@ -6,6 +6,8 @@ import { Recipe } from '../../../../entities/recipe.model';
 import { RecipeService } from '../../../recipe.service';
 import { CategoryService } from '../../../category.service';
 import { Category } from '../../../../entities/Category.model';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
 	selector: 'app-add-recipe',
@@ -17,9 +19,12 @@ export class AddRecipeComponent implements OnInit {
 	rating = 0;
 	recipeForm?: FormGroup;
 	dateAdded: Date | undefined;
-	list: number[] = [6, 4, 7, 4, 6];
 	categoryList?:Category[]
-	constructor(private fb: FormBuilder, private _recipeService: RecipeService,private _categoryService: CategoryService) {
+	constructor(
+		private fb: FormBuilder, 
+		private _recipeService: RecipeService,
+		private _categoryService: CategoryService,
+		private router:Router) {
 		// קריאה לפונקציה initForm כדי לאתחל את הטופס
 		this.initForm();
 	}
@@ -47,7 +52,6 @@ export class AddRecipeComponent implements OnInit {
 			category: ['', Validators.required],
 			preparation_time: ['', Validators.required],
 			difficulty: ['', [Validators.required, Validators.min(1), Validators.max(5)]],
-			userId: [sessionStorage.getItem('id')],
 			routingImage: [''],
 			ingredients: this.fb.array([this.fb.control('')]),
 			instructions: this.fb.array([this.fb.control('')]),
@@ -98,26 +102,34 @@ export class AddRecipeComponent implements OnInit {
 		formData.difficulty = rating;
 		console.log('Form Data:', formData); // הדפסת הנתונים לבדיקה
 		const newRecipe: Recipe = {
-			name: formData.name,
-			categoryId: formData.category,
-			preparationTime: formData.preparation_time,
-			difficultyLevel: rating,
-			dateAdded: this.dateAdded,
-			ingredients: formData.ingredients,
-			instructions: formData.instructions,
-			userId: formData.userId,
-			routingImage: formData.routingImage
-
-		};
+            name: formData.name,
+            categoryId: Number(formData.category),
+            preparationTime: Number(formData.preparation_time),
+            difficultyLevel: rating,
+            ingredients: formData.ingredients,
+            instructions: formData.instructions,
+            userId: Number(sessionStorage.getItem('id')),
+            routingImage: formData.routingImage
+        };
 		console.log(formData.name, "name")
-		this._recipeService.setNewRecipe(newRecipe).subscribe(
-			(response: any) => {
-				console.log('Recipe saved successfully!', response);
+		this._recipeService.setNewRecipe(newRecipe).subscribe({
+			next: (res) => { 
+				Swal.fire(
+					'המתכון נוסף בהצלחה ',
+					'♥️ תודה ששתפת',
+					'success'
+				  );
+				 this.router.navigate(['/recipe/allRecipe']);
+			  		
+		},
+			error: (err) => {
+			  console.log(err)
 			},
-			(error: any) => {
-				console.error('Error saving recipe:', error);
-			},
-		)
+			complete: () => {
+			  console.log('finish');
+			}
+		  })
+		
 	}
 	removeEmptyFields() {
 		this.removeEmptyFieldsFromArray(this.ingredientsArray);

@@ -8,7 +8,7 @@
   
 #son {
     margin: 5px; 
-    box-shadow: 80px 7px 7px black;
+    box-shadow: 80px 7px 7px black !important;
     width: 30%;
     height: 200px;
   }
@@ -34,3 +34,18 @@
     width: 25%;
   }
 
+  html .mat-accent {
+    --mat-slider-ripple-color: black !important;
+    --mat-slider-hover-state-layer-color: black !important;
+    --mat-slider-focus-state-layer-color: black !important;
+    --mdc-slider-handle-color: black !important;
+    --mdc-slider-focus-handle-color: black !important;
+    --mdc-slider-hover-handle-color: black !important;
+    --mdc-slider-active-track-color: black !important;
+    --mdc-slider-inactive-track-color: black !important;
+    --mdc-slider-with-tick-marks-inactive-container-color: black !important;
+    --mdc-slider-with-tick-marks-active-container-color: white;
+}
+ html {
+  --mdc-checkbox-selected-icon-color:black !important
+}

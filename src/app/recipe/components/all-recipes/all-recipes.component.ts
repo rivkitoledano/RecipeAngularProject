@@ -3,9 +3,6 @@ import { RecipeService } from '../../../recipe.service';
 import { Recipe } from '../../../../entities/recipe.model';
 import { Category } from '../../../../entities/Category.model';
 import { CategoryService } from '../../../category.service';
-import { ThemePalette } from '@angular/material/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-// import KebabDiningIcon from '@mui/icons-material/KebabDining';
 
 
 @Component({
@@ -21,6 +18,7 @@ export class AllRecipesComponent implements OnInit {
   categorySelection: { [key: number]: boolean } = {}; // מפתח: שם הקטגוריה, ערך: האם הקטגוריה נבחרה או לא
   preparationTime: number = 0;
   difficultyLevel: number = 1;
+  filterByName:string=''
   constructor(private recipeService: RecipeService, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
@@ -56,19 +54,24 @@ export class AllRecipesComponent implements OnInit {
     this.selectedCategories = this.selectedCategories.includes(categoryId)
       ? this.selectedCategories.filter(id => id !== categoryId)
       : [...this.selectedCategories, categoryId];
-    this.filterAll()
+    
+    this.filteredRecipes = 
+       this.recipeList.filter(recipe => this.selectedCategories.includes(recipe.categoryId));
   }
-  filterAll() {
-   
-    this.filteredRecipes = this.selectedCategories.length === 0
-      ? [...this.recipeList]
-      : this.filteredRecipes.filter(recipe => this.selectedCategories.includes(recipe!.categoryId!));
-      this.applyFilters();
 
+  filterAll() {
+    this.filteredRecipes = this.recipeList.filter(recipe => {
+      const timeCondition = this.preparationTime === 0 || recipe.preparationTime <= this.preparationTime;
+      const difficultyCondition = this.difficultyLevel === 1 || recipe.difficultyLevel <= this.difficultyLevel;
+      const nameCondition = this.filterByName === '' || recipe.name.toLowerCase().includes(this.filterByName.toLowerCase());
+      const categoryCondition = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryId);
+      
+      return timeCondition && difficultyCondition && nameCondition && categoryCondition;
+    });
   }
-  resetFilters() {
-    this.preparationTime = 0;
-    this.difficultyLevel = 1;
-    this.filteredRecipes = [...this.recipeList]; // או להשים רשימה ריקה במקרה שבו אתה רוצה להציג את כל המתכונים מחדש
+    resetFilters() {
+      this.preparationTime = 0;
+      this.difficultyLevel = 1;
+      this.filteredRecipes = [...this.recipeList]; // או להשים רשימה ריקה במקרה שבו אתה רוצה להציג את כל המתכונים מחדש
+    }
   }
-}

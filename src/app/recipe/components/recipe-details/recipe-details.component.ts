@@ -7,7 +7,7 @@ import { CategoryService } from '../../../category.service';
 import { Category } from '../../../../entities/Category.model';
 import { User } from '../../../../entities/user.model';
 import { UserService } from '../../../user.service';
-import { DisplayTimePipe } from '../../../display-time.pipe';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-recipe-details',
@@ -87,6 +87,7 @@ export class RecipeDetailsComponent implements OnInit {
   initUser() {
     this._userService.getUserById(this.userId).subscribe({
       next: (res) => {
+
         this.user = res;
         console.log(this.user)
         if(this.user.password==sessionStorage.getItem('password')&&this.user.name==sessionStorage.getItem('username'))
@@ -101,18 +102,28 @@ export class RecipeDetailsComponent implements OnInit {
     });
   }
   deleteRecipe(){
-    this._recipeService.deleteRecipe(this.recipeId).subscribe({
-      error: (err) => {
-        console.log(err);
+    console.log(this.recipe.id)
+    this._recipeService.deleteRecipe(this.recipe.id).subscribe({
+      next: () => {
+        Swal.fire(
+          '',
+          'מחקתי',
+          'success'
+        );
+        this.router.navigate(['/recipe']);
       },
-      complete: () => {
-        console.log('finish recipe delete');
+      error: (err) => {
+       
+        Swal.fire(
+          'שגיאה!',
+          'ניכשלתי.',
+          'error'
+        );
       }
     });
   }
   edit(){
     this.router.navigate(['/recipe/editRecipe', this.recipe?.id]);
-
   }
 }
 

@@ -18,8 +18,8 @@
         <label for="inputCategory" class="form-label">Category</label>
         <select id="inputCategory" class="form-select" formControlName="category">
           <option value="" disabled selected>Choose a category...</option>
-          <option *ngFor="let category of categoryList">{{category.name}}</option>
-        </select>
+          <option *ngFor="let category of categoryList" [value]="category.id">{{category.name}}</option>
+                </select>
       </div>
 
       <div class="col-md-6">
