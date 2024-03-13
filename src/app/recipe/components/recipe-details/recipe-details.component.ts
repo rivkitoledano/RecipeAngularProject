@@ -18,7 +18,7 @@ export class RecipeDetailsComponent implements OnInit {
   recipeId?: number | any;// מזהה המתכון
   categoryId?: number | any;// מזהה הקטגוריה
   userId?: number | any;// מזהה המתכון
-
+  imageDefault:string[]
   images?: string[]
   recipe?: Recipe
   category?: Category
@@ -56,7 +56,7 @@ export class RecipeDetailsComponent implements OnInit {
         console.log(this.recipe);
         this.ingredients = this.recipe?.ingredients;
         this.instructions = this.recipe?.instructions;
-        this.images = [this.recipe?.routingImage!, this.recipe?.routingImage!];
+        this.images = [this.recipe?.routingImage!, this.recipe?.routingImageExtend!];
         this.categoryId = this.recipe.categoryId;
         this.userId = this.recipe.userId;
         this.initCategory();
@@ -90,7 +90,7 @@ export class RecipeDetailsComponent implements OnInit {
 
         this.user = res;
         console.log(this.user)
-        if(this.user.password==sessionStorage.getItem('password')&&this.user.name==sessionStorage.getItem('username'))
+        if(this.user.password==sessionStorage.getItem('password')&&this.user.name==sessionStorage.getItem('name'))
         this.optiondelete=true
       },
       error: (err) => {

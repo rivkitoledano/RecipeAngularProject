@@ -6,12 +6,17 @@
 				<div class="picsum-img-wrapper">
 					<img [src]="image" alt="image">
 				</div>
+				
 				<div class="carousel-caption">
 					<h1>{{recipe.name}}</h1>
 					<h2>{{category?.name}}<i class="dinner-dining"></i><i class="ionicons ion-ios-trash"></i> </h2>
 					<h3>difficulty level {{""|difficultyLevel:recipe.difficultyLevel}}</h3>
 					<h4>preparation time {{ recipe.preparationTime| displayTime }}</h4>
-					<!-- <mat-icon svgIcon={{category.routingIcon}}></mat-icon> -->
+					<!-- <mat-icon>{{category.routingIcon}}</mat-icon> -->
+					<span class="material-symbols-outlined">
+						delete
+						</span>
+						<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 				</div>
 			</ng-template>
 		</ngb-carousel>
@@ -37,20 +42,13 @@
 		  </ol>
 		</div>
 	  </div>
-	  <div class="example-button-container" *ngIf="optiondelete">
-        <button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="deleteRecipe()">
-          <mat-icon>delete</mat-icon>
-        </button>
-		<button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="deleteRecipe()">
-			<mat-icon>delete</mat-icon>
-		</button>
-      </div>
+	 
 	 
 
 	
 	</div>
 	
-	<div class="btn-group" role="group" aria-label="Default button group">
+	<div class="btn-group" role="group" aria-label="Default button group" *ngIf="optiondelete">
 		<button type="button" class="btn btn-outline-dark" (click)="deleteRecipe()">Delete <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
 			<path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
 		  </svg> </button>

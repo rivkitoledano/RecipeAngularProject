@@ -20,13 +20,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { DisplayTimePipe } from '../display-time.pipe';
 import { MenuModule } from 'primeng/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatSliderModule} from '@angular/material/slider';
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
     declarations: [AllRecipesComponent, SmallRecipeComponent, EditRecipeComponent, AddRecipeComponent, RecipeDetailsComponent,DisplayTimePipe],
     imports: [
         CommonModule, MatButtonModule, MatCardModule, recipeRoutingModule, NavBarComponent,NgbPaginationModule, NgbAlertModule,
-        DifficultyLevelPipe, NgbCarouselModule,FooterComponent,NgbRatingModule,MatIconModule,
-        FormsModule,ReactiveFormsModule,MatCheckboxModule,MenuModule
+        DifficultyLevelPipe, NgbCarouselModule,FooterComponent,NgbRatingModule,MatIconModule,MatSidenavModule,MatSliderModule,
+        FormsModule,ReactiveFormsModule,MatCheckboxModule,MenuModule,SidebarModule
     ]
 })
 export class RecipeModule { }

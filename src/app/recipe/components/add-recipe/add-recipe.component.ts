@@ -48,11 +48,12 @@ export class AddRecipeComponent implements OnInit {
 	}
 	private initForm() {
 		this.recipeForm = this.fb.group({
-			name: ['', Validators.required],
+			name: ['', Validators.required,Validators.minLength(2)],
 			category: ['', Validators.required],
-			preparation_time: ['', Validators.required],
+			preparation_time: ['', Validators.required,Validators.min(1)],
 			difficulty: ['', [Validators.required, Validators.min(1), Validators.max(5)]],
-			routingImage: [''],
+			routingImage: ['../../../../assets/images/background.jpg'],
+			routingImageExtend:['../../../../assets/images/background.jpg'],
 			ingredients: this.fb.array([this.fb.control('')]),
 			instructions: this.fb.array([this.fb.control('')]),
 		});
@@ -109,7 +110,8 @@ export class AddRecipeComponent implements OnInit {
             ingredients: formData.ingredients,
             instructions: formData.instructions,
             userId: Number(sessionStorage.getItem('id')),
-            routingImage: formData.routingImage
+            routingImage: formData.routingImage,
+			routingImageExtend:formData.routingImageExtend
         };
 		console.log(formData.name, "name")
 		this._recipeService.setNewRecipe(newRecipe).subscribe({

@@ -2,7 +2,7 @@
 
 	width: 100%;
 	/* השתמשתי ב- vw במקום ב- % כדי לקבוע את הרוחב ביחס לרוחב של החלון ולא לעמודה */
-	height: 140vw;
+	height: 150vw;
 	/* השתמשתי ב- vh במקום ב- % כדי לקבוע את הגובה ביחס לגובה של החלון ולא לעמודה */
 	background-size: cover;
 	background-position: center;
@@ -44,4 +44,7 @@ margin: auto;    font-weight: 800;
 }
 .btn-group{
 	width: 100%;
+}
+app-footer{
+	padding-bottom: 0%;
 }

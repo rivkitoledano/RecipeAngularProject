@@ -77,6 +77,7 @@ export class EditRecipeComponent implements OnInit {
           difficulty: [this.recipeToUpdate ? this.recipeToUpdate.difficultyLevel : '', [Validators.required]],
           userId: [this.recipeToUpdate ? this.recipeToUpdate.userId : '', Validators.required],
           routingImage: [this.recipeToUpdate ? this.recipeToUpdate.routingImage : ''],
+          routingImageExtend: [this.recipeToUpdate ? this.recipeToUpdate.routingImageExtend : '../../../../assets/images/background.jpg'],
           ingredients: this.fb.array([]),
           instructions: this.fb.array([]),
       });
@@ -153,7 +154,8 @@ export class EditRecipeComponent implements OnInit {
       ingredients: formData.ingredients,
       instructions: formData.instructions,
       userId: formData.userId,
-      routingImage: formData.routingImage
+      routingImage: formData.routingImage,
+      routingImageExtend:formData.routingImageExtend
     };
     console.log( "recipeToUpdate",this.recipeToUpdate)
 

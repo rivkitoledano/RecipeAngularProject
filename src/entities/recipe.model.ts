@@ -9,4 +9,6 @@ export class Recipe {
     instructions?:string[]
     userId?:number
     routingImage?: string
+    routingImageExtend?: string
+
 }

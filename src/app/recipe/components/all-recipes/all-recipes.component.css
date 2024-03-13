@@ -6,12 +6,7 @@
 
   }
   
-#son {
-    margin: 5px; 
-    box-shadow: 80px 7px 7px black !important;
-    width: 30%;
-    height: 200px;
-  }
+
   .example-section {
     margin: 12px 0;
   }
@@ -34,18 +29,39 @@
     width: 25%;
   }
 
-  html .mat-accent {
-    --mat-slider-ripple-color: black !important;
-    --mat-slider-hover-state-layer-color: black !important;
-    --mat-slider-focus-state-layer-color: black !important;
-    --mdc-slider-handle-color: black !important;
-    --mdc-slider-focus-handle-color: black !important;
-    --mdc-slider-hover-handle-color: black !important;
-    --mdc-slider-active-track-color: black !important;
-    --mdc-slider-inactive-track-color: black !important;
-    --mdc-slider-with-tick-marks-inactive-container-color: black !important;
-    --mdc-slider-with-tick-marks-active-container-color: white;
-}
+
  html {
   --mdc-checkbox-selected-icon-color:black !important
 }
+/* Ensure flexbox for card container */
+.card-container.two {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap:5vw
+}
+
+
+
+.flex {
+margin-bottom: 10%;
+}
+
+app-footer {
+margin-top: 10%;
+padding-bottom: 0%;
+}
+.side{
+  margin-left:2% ;
+}
+.range{
+  padding-top: 2%;
+}
+.form-control{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.input{
+  color: #000 !important;
+}
+

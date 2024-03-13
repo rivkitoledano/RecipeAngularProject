@@ -4,7 +4,6 @@ import { UserService } from '../../../user.service';
 import { User } from '../../../../entities/user.model';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { password } from '../../../password-pattern-validator';
-
 @Component({
     selector: 'app-register',
     templateUrl: './register.component.html',
@@ -28,7 +27,7 @@ export class RegisterComponent implements OnInit {
     ngOnInit(): void {
         this.userForm = this.formBuilder.group({
             id: [this.count + 1], // Initialize Code to the nextUserCode + 1
-            name: ['riki', Validators.required],
+            name: ['', Validators.required],
             password: ['', [Validators.required, password]],
             address: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]]
@@ -44,7 +43,7 @@ export class RegisterComponent implements OnInit {
         this._userService.getUserList().subscribe({
             next: (res) => {
                 this.userList = res;
-                this.count = this.userList.length; // Set nextUserCode to the size of the array
+                this.count = this.userList.length+1; // Set nextUserCode to the size of the array
 
             },
             error: (err) => {

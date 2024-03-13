@@ -1,30 +1,79 @@
-.example-card {
-    width: 400px;
 
-  }
   
  .example-header-image {
-    background-image: url('https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_640.png');
+    background-image: url('../../../../assets/images/chef.jpg');
     background-size: cover;
+    border: 1.8px solid black;
 }
 
 
-.card {
-}
+
 
 .card img {
   width: 100%;
-  height: 40vh;
+  height: 15vw;
 }
 
 .card mat-card-content {
   margin-top: 10px;
+
 }
 .cardbox{
-  width: 25vmax;
-  height: 200px;
-  margin-bottom:17vmax;
+  width: 20vw;
+  height: 25vw;
 
 }
 h2{
 text-align: center;}
+.cardbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom:10%;
+
+}
+
+.mat-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+
+}
+
+.mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.mat-card-image {
+  width: 100%;
+  height: auto;
+}
+
+.mat-card-content {
+  padding: 10px;
+}
+
+
+
+.head{
+  height: 7vw;
+}
+mat-card-title{
+  font-size: large;
+}

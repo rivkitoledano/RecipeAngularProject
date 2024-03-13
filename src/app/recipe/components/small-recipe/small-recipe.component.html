@@ -1,12 +1,12 @@
   <div class="cardbox">
     <mat-card class="card">
-      <mat-card-header>
+      <mat-card-header class="head">
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{recipe?.name}}</mat-card-title>
         
         <mat-card-subtitle>preparation time {{ recipe.preparationTime| displayTime }}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src={{recipe?.routingImage}} alt="Photo of a Shiba Inu">
+      <img mat-card-image src={{recipe?.routingImage}} alt="Photo ">
       
       <mat-card-content>difficulty level {{""|difficultyLevel:recipe?.difficultyLevel}}</mat-card-content>
       <mat-card-actions>
