@@ -46,7 +46,7 @@
         <h4 class="h-filter">בחר קטגוריה</h4>
         <div *ngFor="let category of categoryList">
           <mat-checkbox (change)="filterCategory(category.id)" [color]="'warn'">
-            {{category.name}}
+            <i class="material-icons">{{ category.routingIcon }}</i> {{category?.name}}    
           </mat-checkbox>
         </div>
       </section>

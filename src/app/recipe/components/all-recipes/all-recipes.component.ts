@@ -16,8 +16,8 @@ export class AllRecipesComponent implements OnInit {
   filteredRecipes: Recipe[] = this.recipeList;
   selectedCategories: number[] = [];
   categorySelection: { [key: number]: boolean } = {}; // מפתח: שם הקטגוריה, ערך: האם הקטגוריה נבחרה או לא
-  preparationTime: number = 0;
-  difficultyLevel: number = 1;
+  preparationTime: number = 120;
+  difficultyLevel: number = 5;
   filterByName:string=''
   constructor(private recipeService: RecipeService, private categoryService: CategoryService) { }
 
@@ -48,7 +48,7 @@ export class AllRecipesComponent implements OnInit {
   filterAll(): void {
     this.filteredRecipes = this.recipeList.filter(recipe => {
       const time = this.preparationTime === 0 || recipe.preparationTime <= this.preparationTime;
-      const difficulty = this.difficultyLevel === 0 || recipe.difficultyLevel === this.difficultyLevel;
+      const difficulty = this.difficultyLevel === 0 || recipe.difficultyLevel <= this.difficultyLevel;
       const category = this.selectedCategories.length === 0 || this.selectedCategories.includes(recipe.categoryId);
       const name = this.filterByName === '' || recipe.name.toLowerCase().includes(this.filterByName.toLowerCase());
       return time && difficulty && category && name;
@@ -72,8 +72,8 @@ export class AllRecipesComponent implements OnInit {
   
     resetFilters() {
       this.filterByName=''
-      this.preparationTime = 0;
-      this.difficultyLevel = 1;
+      this.preparationTime =  120;
+      this.difficultyLevel = 5;
       this.filteredRecipes = [...this.recipeList]; // או להשים רשימה ריקה במקרה שבו אתה רוצה להציג את כל המתכונים מחדש
     }
   }

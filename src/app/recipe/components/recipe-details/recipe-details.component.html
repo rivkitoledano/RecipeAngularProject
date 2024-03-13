@@ -1,3 +1,4 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
 <app-nav-bar></app-nav-bar>
 <div class="container" *ngIf="images && recipe">
 	<div *ngIf="images.length > 0">
@@ -9,15 +10,13 @@
 				
 				<div class="carousel-caption">
 					<h1>{{recipe.name}}</h1>
-					<h2>{{category?.name}}<i class="dinner-dining"></i><i class="ionicons ion-ios-trash"></i> </h2>
+					<h2>{{category?.name}}    <i class="material-icons">{{ category.routingIcon }}</i>   </h2>
 					<h3>difficulty level {{""|difficultyLevel:recipe.difficultyLevel}}</h3>
+					
+
 					<h4>preparation time {{ recipe.preparationTime| displayTime }}</h4>
-					<!-- <mat-icon>{{category.routingIcon}}</mat-icon> -->
-					<span class="material-symbols-outlined">
-						delete
-						</span>
-						<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-				</div>
+									
+					</div>
 			</ng-template>
 		</ngb-carousel>
 	</div>
@@ -43,7 +42,7 @@
 		</div>
 	  </div>
 	 
-	 
+
 
 	
 	</div>
