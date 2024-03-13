@@ -74,6 +74,8 @@ export class AllRecipesComponent implements OnInit {
       this.filterByName=''
       this.preparationTime =  120;
       this.difficultyLevel = 5;
+      this.selectedCategories = [];
+
       this.filteredRecipes = [...this.recipeList]; // או להשים רשימה ריקה במקרה שבו אתה רוצה להציג את כל המתכונים מחדש
     }
   }
