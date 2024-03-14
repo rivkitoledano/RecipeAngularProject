@@ -1,0 +1,65 @@
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\appsettings.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.exe
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.deps.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.runtimeconfig.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.pdb
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.csproj.AssemblyReference.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.AssemblyInfoInputs.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.AssemblyInfo.cs
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.recipeServer.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.build.recipeServer.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.recipeServer.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.recipeServer.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\scopedcss\bundle\recipeServer.styles.css
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeSe.6E235253.Up2Date
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\refint\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.pdb
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.genruntimeconfig.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\recipeServer\recipeServer\obj\Debug\net8.0\ref\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\appsettings.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.exe
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.deps.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.runtimeconfig.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\recipeServer.pdb
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.csproj.AssemblyReference.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.AssemblyInfoInputs.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.AssemblyInfo.cs
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.sourcelink.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.recipeServer.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.build.recipeServer.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.recipeServer.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.recipeServer.props
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\scopedcss\bundle\recipeServer.styles.css
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeSe.6E235253.Up2Date
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\refint\recipeServer.dll
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.pdb
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\recipeServer.genruntimeconfig.cache
+C:\Users\user1\Documents\רבקי למודים\angular\project\רבקי פרויקט\RegularProject\recipeServer\recipeServer\obj\Debug\net8.0\ref\recipeServer.dll
